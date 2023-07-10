@@ -104,25 +104,36 @@ print('Last element from 2nd dim: ', arrD[1, -1])
 '''---------------------------------------------'''
 
 # Slicing in python means taking elements from one given index to another given index.
-
 # We pass slice instead of index like this: [start:end].
-
 # We can also define the step, like this: [start:end:step].
-
 # If we don't pass start its considered 0
-
 # If we don't pass end its considered length of array in that dimension
-
 # If we don't pass step its considered 1
+
 
 array1 =  np.array([1, 2, 3, 4, 5, 6, 7])
 
-print("elements from index 1 to index 5: ", array1[1:5])
+print("elements from index 1 to index 5: ",
+       array1[1:5])
 #elements from index 1 to index 5:  [2 3 4 5]
 #The result includes the start index, but excludes the end index.
 
-print("elements from index index 4 to the end: ", array1[4:])
+print("elements from index index 4 to the end: ",
+       array1[4:])
 #elements from index index 4 to the end:  [5 6 7]
 
-print("elements from the index 3 from the end to index 1: ", array1[-3:-1])
 
+print("elements from the index 3 from the end to index 1: ",
+       array1[-3:-1])
+# elements from the index 3 from the end to index 1:  [5 6]
+
+
+#STEP
+
+print(array1[1:6:2])
+#return every other element from index 1 to index 6
+#[2 4 6]
+
+print(array1[::2])
+#Return every other element from the entire array
+#[1 3 5 7]
