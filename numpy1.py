@@ -307,6 +307,39 @@ print('shape of array :', arr.shape)
 
 '''                Re-Shape                     '''
 '''---------------------------------------------'''
+#Reshaping means changing the shape of an array.
+
+
+arrE = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12])
+
+
+#Reshape From 1-D to 2-D
+newarr = arrE.reshape(3, 4)
+
+print(newarr)
+
+# [[ 1  2  3  4]
+#  [ 5  6  7  8]
+#  [ 9 10 11 12]]
+# The outermost dimension will have 3 arrays, each with 4 elements
+
+#Reshape From 1-D to 3-D
+newarr = arrE.reshape(2, 2, 3)
+print(newarr)
+
+# [[[ 1  2  3]
+#   [ 4  5  6]]
+
+#  [[ 7  8  9]
+#   [10 11 12]]]
+
+#The outermost dimension will have 2 arrays that contains 2 arrays,
+#  each with 3 elements
+
+
+
+# note :
+# We can reshape an 8 elements 1D array into 4 elements in 2 rows 2D array but we cannot reshape it into a 3 elements 3 rows 2D array as that would require 3x3 = 9 elements
 
 
 
