@@ -344,11 +344,43 @@ print(newarr)
 #  3 rows 2D array as that would require 3x3 = 9 elements
 
 
+#Unknown Dimension
+arrG = np.array([1, 2, 3, 4, 5, 6, 7, 8])
+newarr1 = arrG.reshape(2, 2, -1)
+print(newarr1)
+
+# [[[1 2]
+#   [3 4]]
+
+#  [[5 6]
+#   [7 8]]]
+
+#Flattening the arrays
+arrH = np.array([[1, 2, 3], [4, 5, 6]])
+
+newarr = arrH.reshape(-1)
+
+print(newarr)
+#[1 2 3 4 5 6]
 
 '''                Iterating                    '''
 '''---------------------------------------------'''
+#Iterating means going through elements one by one
 
+for x in arrA:
+  print(x)
+# 4
+# 5
+# 6
+# 7
 
+#Iterating 2-D Arrays
+print("Array 2d", arr2D)
+for x in arr2D:
+  print(x)
+
+# [1 2 3 4 5]
+# [ 6  7  8  9 10]
 
 '''                   Join                      '''
 '''---------------------------------------------'''
