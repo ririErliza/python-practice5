@@ -382,6 +382,53 @@ for x in arr2D:
 # [1 2 3 4 5]
 # [ 6  7  8  9 10]
 
+#To return the actual values, the scalars,
+#  we have to iterate the arrays in each dimension
+
+for x in arr2D:
+  for y in x:
+    print(y)
+
+# 1
+# 2
+# 3
+# 4
+# 5
+# 6
+# 7
+# 8
+# 9
+# 10
+
+#Iterating 3-D Arrays
+print(arr5)
+
+for x in arr5:
+  print(x)
+
+# [[1 2 3]
+#  [4 5 6]]
+# [[3 2 1]
+#  [4 5 6]]
+
+for x in arr5:
+  for y in x:
+    for z in y:
+      print(z)
+
+# 1
+# 2
+# 3
+# 4
+# 5
+# 6
+# 3
+# 2
+# 1
+# 4
+# 5
+# 6
+
 '''                   Join                      '''
 '''---------------------------------------------'''
 
