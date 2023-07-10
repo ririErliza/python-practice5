@@ -89,4 +89,40 @@ print('5th element on 2nd row: ', arrB[1, 4])
 
 
 #Access 3-D Arrays
+
 arrC = np.array([[[1, 2, 3], [4, 5, 6]], [[7, 8, 9], [10, 11, 12]]])
+print('3rd element on 2nd array of 1st array: ', arrC[0, 1, 2])
+#3rd element on 2nd array of 1st array:  6
+
+#Negative Indexing
+
+arrD = np.array([[1,2,3,4,5], [6,7,8,9,10]])
+print('Last element from 2nd dim: ', arrD[1, -1])
+#Last element from 2nd dim:  10
+
+'''            Array Slicing                    '''
+'''---------------------------------------------'''
+
+# Slicing in python means taking elements from one given index to another given index.
+
+# We pass slice instead of index like this: [start:end].
+
+# We can also define the step, like this: [start:end:step].
+
+# If we don't pass start its considered 0
+
+# If we don't pass end its considered length of array in that dimension
+
+# If we don't pass step its considered 1
+
+array1 =  np.array([1, 2, 3, 4, 5, 6, 7])
+
+print("elements from index 1 to index 5: ", array1[1:5])
+#elements from index 1 to index 5:  [2 3 4 5]
+#The result includes the start index, but excludes the end index.
+
+print("elements from index index 4 to the end: ", array1[4:])
+#elements from index index 4 to the end:  [5 6 7]
+
+print("elements from the index 3 from the end to index 1: ", array1[-3:-1])
+
