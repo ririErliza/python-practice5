@@ -137,3 +137,26 @@ print(array1[1:6:2])
 print(array1[::2])
 #Return every other element from the entire array
 #[1 3 5 7]
+
+
+#Slicing 2-D Arrays
+print("----2D Slicing----")
+
+arr2D = np.array([[1, 2, 3, 4, 5], [6, 7, 8, 9, 10]])
+
+print(arr2D[1, 1:4])
+#From the second element, slice elements from index
+#  1 to index 4 (not included)
+#[7 8 9]
+
+print(arr2D[0:2, 2])
+#From both elements, return index 2
+#[3 8]
+
+print(arr2D[0:2, 1:4])
+#From both elements, slice index 1 to index 4 (not included),
+#  this will return a 2-D array
+# [[2 3 4]
+#  [7 8 9]]
+
+
