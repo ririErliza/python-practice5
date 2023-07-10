@@ -219,10 +219,121 @@ arr9 = np.array([1.1, 2.1, 3.1])
 
 newarr = arr9.astype('i')
 
-print("new array", newarr)
+print("new integer array", newarr)
 print(newarr.dtype)
 
 #new array [1 2 3]
 #int32
 
+newarr = arr.astype(bool)
 
+print("new boolean array",newarr)
+print(newarr.dtype)
+
+# new boolean array [ True  True  True  True]
+# bool
+
+'''             Copy vs View                    '''
+'''---------------------------------------------'''
+
+
+print(arr8)
+x = arr8.copy()
+arr8[0] = 42
+
+print(arr8)
+print(x)
+
+# [1 2 3 4]
+# [42  2  3  4]
+# [1 2 3 4]          # The copy SHOULD NOT be affected by the
+                     #  changes made to the original array.
+
+
+
+y = arr8.view()
+arr8[0] = 33
+
+print(arr8)
+print(y)
+
+# [33  2  3  4]
+# [33  2  3  4]      #The view SHOULD be affected by
+                     # the changes made to the original array.
+
+
+
+z = arr8.view()
+z[0] = 21
+
+print(arr8)
+print(z)
+
+# [21  2  3  4]
+# [21  2  3  4]      # The original array SHOULD be affected
+                     #  by the changes made to the view.
+
+
+# Check if Array Owns its Data
+
+print(x.base) #None
+print(y.base) #[21  2  3  4]
+
+# The copy returns None.
+# The view returns the original array.
+
+print("----------------------------------------")
+
+
+'''                  Shape                      '''
+'''---------------------------------------------'''
+# The shape of an array is the number of elements
+#  in each dimension.
+
+
+#shape of a 2-D array
+arr = np.array([[1, 2, 3, 4], [5, 6, 7, 8]])
+print(arr.shape)
+# (2, 4)
+#which means that the array has 2 dimensions,
+#where the first dimension has 2 elements and the second has 4.
+
+# ndmin 5d array
+arr = np.array([1, 1, 3,5], ndmin=5)
+print(arr)
+print('shape of array :', arr.shape)
+# [[[[[1 2 3 4]]]]]
+# shape of array : (1, 1, 1, 1, 4)
+
+'''                Re-Shape                     '''
+'''---------------------------------------------'''
+
+
+
+'''                Iterating                    '''
+'''---------------------------------------------'''
+
+
+
+'''                   Join                      '''
+'''---------------------------------------------'''
+
+
+
+'''                  Split                      '''
+'''---------------------------------------------'''
+
+
+
+'''                  Search                     '''
+'''---------------------------------------------'''
+
+
+
+'''                   Sort                      '''
+'''---------------------------------------------'''
+
+
+
+'''                  Filter                     '''
+'''---------------------------------------------'''
