@@ -100,6 +100,7 @@ arrD = np.array([[1,2,3,4,5], [6,7,8,9,10]])
 print('Last element from 2nd dim: ', arrD[1, -1])
 #Last element from 2nd dim:  10
 
+
 '''            Array Slicing                    '''
 '''---------------------------------------------'''
 
@@ -158,5 +159,70 @@ print(arr2D[0:2, 1:4])
 #  this will return a 2-D array
 # [[2 3 4]
 #  [7 8 9]]
+
+
+'''              Data Types                     '''
+'''---------------------------------------------'''
+
+#NumPy has some extra data types, and refer to data types
+#  with one character
+# i - integer
+# b - boolean
+# u - unsigned integer
+# f - float
+# c - complex float
+# m - timedelta
+# M - datetime
+# O - object
+# S - string
+# U - unicode string
+# V - fixed chunk of memory for other type ( void )
+
+print(arrA.dtype) 
+#int32
+
+arrS = np.array(["apple","banana","melon"])
+print(arrS.dtype)
+# <U6
+
+#Creating Arrays With a Defined Data Type
+arr7 = np.array([1, 2, 3, 4], dtype='S')
+
+print(arr7)
+# [b'1' b'2' b'3' b'4']
+print(arr7.dtype)
+# |S1
+
+#Create an array with data type 4 bytes integer
+arr8 = np.array([1, 2, 3, 4], dtype='i4')
+
+print(arr8)
+#[1 2 3 4]
+print(arr8.dtype)
+#int32
+
+# ValueError: In Python ValueError is raised when the type
+#  of passed argument to a function is unexpected/incorrect.
+# A non integer string like 'a' can not be converted to integer
+#  (will raise an error)
+
+
+
+#Converting Data Type on Existing Arrays
+
+
+# astype()
+# this function creates a copy of the array, 
+# and allows to specify the data type as a parameter
+
+arr9 = np.array([1.1, 2.1, 3.1])
+
+newarr = arr9.astype('i')
+
+print("new array", newarr)
+print(newarr.dtype)
+
+#new array [1 2 3]
+#int32
 
 
