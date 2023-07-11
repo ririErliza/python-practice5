@@ -569,16 +569,45 @@ print("a: ", a)
 #searchsorted()
 
 arrU = np.array([6, 7, 8, 9])
-
 b = np.searchsorted(arrU, 7)
 
 print("b:", b)
+#b: 1
+
+
 
 
 '''                   Sort                      '''
 '''---------------------------------------------'''
+#sort()
+# that will sort a specified array
 
+arrV = np.array([3, 2, 0, 1])
 
+print(np.sort(arrV))
+#[0 1 2 3]
+
+# alphabetically
+arrW = np.array(['banana', 'cherry', 'apple'])
+print(np.sort(arrW))
+#['apple' 'banana' 'cherry']
+
+#Sort a 2-D array
+arrX = np.array([[3, 2, 4], [5, 0, 1]])
+print(np.sort(arrX))
+# [[2 3 4]
+#  [0 1 5]]
 
 '''                  Filter                     '''
 '''---------------------------------------------'''
+
+arr = np.array([41, 42, 43, 44])
+
+filter_arr = arr > 42
+
+newarr = arr[filter_arr]
+
+print(filter_arr)
+print(newarr)
+# [False False  True  True]
+# [43 44]
