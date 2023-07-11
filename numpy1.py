@@ -550,7 +550,29 @@ print(newSplitArr)
 
 '''                  Search                     '''
 '''---------------------------------------------'''
+#where() method
 
+arrT = np.array([1, 2, 3, 4, 5, 4, 4])
+
+x = np.where(arrT == 4)
+
+print("where? at: ",x)
+#where? at:  (array([3, 5, 6], dtype=int64),)
+# the value 4 is present at index 3, 5, and 6
+
+
+a = np.where(arrT%2 == 0)
+print("a: ", a)
+#a:  (array([1, 3, 5, 6], dtype=int64),)
+
+
+#searchsorted()
+
+arrU = np.array([6, 7, 8, 9])
+
+b = np.searchsorted(arrU, 7)
+
+print("b:", b)
 
 
 '''                   Sort                      '''
