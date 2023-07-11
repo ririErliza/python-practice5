@@ -523,6 +523,30 @@ print(newarr[2])
 # [[2 5]]
 # [[3 6]]
 
+#Splitting 2-D Arrays
+arrO = np.array([[1, 2], [3, 4], [5, 6], [7, 8], [9, 10], [11, 12]])
+
+split2D = np.array_split(arrO, 3)
+print(split2D)
+
+# [array([[1, 2],
+#        [3, 4]]), array([[5, 6],
+#        [7, 8]]), array([[ 9, 10],
+#        [11, 12]])]
+
+
+#split 2-D arrays that contains 3 elements
+arrP = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12], [13, 14, 15], [16, 17, 18]])
+
+newSplitArr = np.array_split(arrP, 3)
+
+print(newSplitArr)
+# [array([[1, 2, 3],
+#        [4, 5, 6]]), array([[ 7,  8,  9],
+#        [10, 11, 12]]), array([[13, 14, 15],
+#        [16, 17, 18]])]
+
+
 
 '''                  Search                     '''
 '''---------------------------------------------'''
