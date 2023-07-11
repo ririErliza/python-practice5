@@ -434,11 +434,94 @@ for x in arr5:
 '''                   Join                      '''
 '''---------------------------------------------'''
 
+arrI = np.array([1,2,2])
+arrJ = np.array([2,3,3])
 
+joinArr = np.concatenate((arrI,arrJ))
+
+print(joinArr)
+#[1 2 2 2 3 3]
+
+#Join two 2-D arrays along rows (axis=1)
+
+arr1 = np.array([[1, 2], [3, 4]])
+
+arr2 = np.array([[5, 6], [7, 8]])
+
+arr = np.concatenate((arr1, arr2), axis=1)
+
+print(arr)
+#[[1 2 5 6]
+#[3 4 7 8]]
+
+#Stack Functions
+arr1 = np.array([1, 2, 3])
+
+arr2 = np.array([4, 5, 6])
+
+arr = np.stack((arr1, arr2), axis=1)
+
+print(arr)
+# [[1 4]
+#  [2 5]
+#  [3 6]]
+
+#Stacking Along Rows
+arrK = np.array([1, 2, 3])
+
+arrL = np.array([4, 5, 6])
+
+arrJoin1 = np.hstack((arrK, arrL))
+
+print(arrJoin1)
+#[1 2 3 4 5 6]
+
+
+#Stacking Along Columns
+
+arrJoin2 = np.vstack((arrK, arrL))
+
+print(arrJoin2)
+# [[1 2 3]
+#  [4 5 6]]
+
+#Stacking Along Height (depth)
+arrJoin3 = np.dstack((arrK, arrL))
+
+print(arrJoin3)
+
+# [[[1 4]
+#   [2 5]
+#   [3 6]]]
 
 '''                  Split                      '''
 '''---------------------------------------------'''
+#array_split()
 
+arrN = np.array([1, 2, 3, 4, 5, 6])
+splitArr = np.array_split(arrN, 3)
+
+print(splitArr)
+#[array([1, 2]), array([3, 4]), array([5, 6])]
+
+
+#If the array has less elements than required,
+#  it will adjust from the end accordingly.
+newarr = np.array_split(arrN, 4)
+
+print(newarr)
+#[array([1, 2]), array([3, 4]), array([5]), array([6])]
+
+
+#Access the splitted arrays
+newarr = np.array_split(arr, 3)
+
+print(newarr[0])
+print(newarr[1])
+print(newarr[2])
+# [[1 4]]
+# [[2 5]]
+# [[3 6]]
 
 
 '''                  Search                     '''
