@@ -611,3 +611,13 @@ print(filter_arr)
 print(newarr)
 # [False False  True  True]
 # [43 44]
+
+
+filter_arr = arr % 2 == 0
+
+newarr = arr[filter_arr]
+
+print(filter_arr)
+print(newarr)
+# [False  True False  True]
+# [42 44]
