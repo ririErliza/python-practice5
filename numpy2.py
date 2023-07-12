@@ -52,3 +52,28 @@ x = np.arange(2,3, 0.1)
 print(x)
 # [2.  2.1 2.2 2.3 2.4 2.5 2.6 2.7 2.8 2.9]
 
+
+''' linspace() '''
+x = np.linspace(1.,4., 6)
+print(x)
+# [1.  1.6 2.2 2.8 3.4 4. ]
+# starting from one to 4 but there are 6 elements
+#  in the array, numpy will do the calculation
+
+
+''' full() '''
+x = np.full((2,2), 8)
+print(x)
+# [[8 8]
+#  [8 8]]
+
+
+''' eye() '''
+x=np.eye(3)
+print(x)
+#[[1. 0. 0.]
+#  [0. 1. 0.]
+#  [0. 0. 1.]]
+
+''' random.random() '''
+
