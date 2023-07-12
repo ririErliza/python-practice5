@@ -621,3 +621,28 @@ print(filter_arr)
 print(newarr)
 # [False  True False  True]
 # [42 44]
+
+'''               Append & Delete               '''
+'''---------------------------------------------'''
+
+
+arrQ = np.array(["jello", 1, True])
+print(arrQ) #['jello' '1' 'True']
+print(arrQ.ndim) #1
+print(arrQ.data) #<memory at 0x0000024766EC5D80>
+
+#append
+arrq1= np.append(arrQ[0],99)
+print(arrq1) #['jello' '99']
+
+print(arrQ) #['jello' '1' 'True']
+
+arrq2 = np.append(arrQ, 99)
+print(arrq2) #['jello' '1' 'True' '99']
+
+arrq2 = np.delete(arrq2,1)
+print(arrq2) #['jello' 'True' '99']
+
+
+
+
