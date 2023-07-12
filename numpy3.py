@@ -24,3 +24,19 @@ print(x*y)
 print(x/y)
 # [[0.2        0.33333333]
 #  [0.42857143 0.5       ]]
+
+# square root
+z = np.sqrt(x)
+print(z)
+# [[1.         1.41421356]
+#  [1.73205081 2.        ]]
+
+# dot()
+v = np.array([1,2])
+w = np.array([2,2])
+print(v.dot(w)) # 6
+# 1x2 + 2x2 = 6
+
+v = np.array([1,2,1])
+w = np.array([2,2,1])
+print(v.dot(w)) # 7
