@@ -77,3 +77,23 @@ print(x)
 
 ''' random.random() '''
 
+x = np.random.random((3,4))
+print(x)
+# [[0.38135397 0.23462828 0.85515616 0.16874389]
+#  [0.05260225 0.39708288 0.16619698 0.81681055]
+#  [0.9883331  0.20358459 0.65895373 0.6359358 ]]
+
+#Convert Floats to Integers (Rounded Down)
+intX = x.astype(int)
+print(intX)
+# [[0 0 0 0]
+#  [0 0 0 0]
+#  [0 0 0 0]]
+
+# Convert Floats to Integers (Rounded to Nearest Integer)
+intX = (np.rint(x).astype(int))
+print(intX)
+# [[0 1 0 1]
+#  [0 0 0 0]
+#  [1 1 0 1]]
+
