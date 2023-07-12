@@ -40,3 +40,22 @@ print(v.dot(w)) # 6
 v = np.array([1,2,1])
 w = np.array([2,2,1])
 print(v.dot(w)) # 7
+
+#this dot() function will give us scalar value 
+# only if we operate same dimension arrays
+
+''' reverse the matrix '''
+print(x)
+# [[1 2]
+#  [3 4]]
+
+print(x.T)
+# [[1 3]
+#  [2 4]]
+
+print(np.sum(x)) # 10
+
+print(np.sum(x, axis = 0))
+# [4 6]
+
+print(np.sum(x, axis = 1))
