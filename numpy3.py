@@ -59,3 +59,4 @@ print(np.sum(x, axis = 0))
 # [4 6]
 
 print(np.sum(x, axis = 1))
+# [3 7]
