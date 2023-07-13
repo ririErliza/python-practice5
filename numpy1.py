@@ -238,13 +238,16 @@ print(newarr.dtype)
 
 
 print(arr8)
+# [1 2 3 4]
+
+
 x = arr8.copy()
 arr8[0] = 42
 
 print(arr8)
 print(x)
 
-# [1 2 3 4]
+
 # [42  2  3  4]
 # [1 2 3 4]          # The copy SHOULD NOT be affected by the
                      #  changes made to the original array.
