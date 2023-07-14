@@ -283,20 +283,79 @@ print(x)
 '''-------------------------------------------'''
 '''         Exponential Distribution          '''
 '''-------------------------------------------'''
+# Exponential distribution is used for describing time till next
+#  event e.g. failure/success etc.
 
+# It has two parameters:
+    # scale - inverse of rate ( see lam in poisson distribution )
+    #         defaults to 1.0.
+    # size - The shape of the returned array.
+
+x = random.exponential(scale=2, size=(2, 3))
+print(x)
+
+#Relation Between Poisson and Exponential Distribution
+#Poisson distribution deals with number of occurences of
+#  an event in a time period whereas exponential distribution
+#  deals with the time between these events.
 
 '''-------------------------------------------'''
 '''          Chi Square Distribution          '''
 '''-------------------------------------------'''
+# Chi Square distribution is used as a basis to verify the hypothesis.
 
+# It has two parameters:
+    # df - (degree of freedom).
+    # size - The shape of the returned array.
+
+x = random.chisquare(df=2, size=(2, 3))
+
+print(x)
 
 '''-------------------------------------------'''
 '''           Rayleigh Distribution           '''
 '''-------------------------------------------'''
+# Rayleigh distribution is used in signal processing.
 
+# It has two parameters:
+    # scale - (standard deviation) decides how flat
+    #         the distribution will be default 1.0).
+    # size - The shape of the returned array.
+
+x = random.rayleigh(scale=2, size=(2, 3))
+print(x)
 
 '''-------------------------------------------'''
 '''            Pareto Distribution            '''
 '''-------------------------------------------'''
+# A distribution following Pareto's law i.e. 80-20
+#  distribution (20% factors cause 80% outcome).
 
+# It has two parameter:
+#       a - shape parameter.
+#       size - The shape of the returned array.
 
+x = random.pareto(a=2, size=(2, 3))
+print(x)
+
+'''-------------------------------------------'''
+'''            Zipf Distribution              '''
+'''-------------------------------------------'''
+# Zipf distributions are used to sample data based on zipf's law.
+
+# Zipf's Law: In a collection, the nth common term is 1/n times of
+#  the most common term. E.g. the 5th most common word in English
+#  occurs nearly 1/5 times as often as the most common word.
+
+# It has two parameters:
+#       a - distribution parameter.
+#       size - The shape of the returned array.
+
+x = random.zipf(a=2, size=(2, 3))
+
+print(x)
+
+# x = random.zipf(a=2, size=1000)
+# sns.distplot(x[x<10], kde=False)
+
+# plt.show()
