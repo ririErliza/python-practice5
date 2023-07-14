@@ -209,11 +209,35 @@ print(x)
 '''-------------------------------------------'''
 '''            Poisson Distribution           '''
 '''-------------------------------------------'''
+# Poisson Distribution is a Discrete Distribution (it has its own space).
+# It estimates how many times an event can happen in a
+#  specified time. e.g. If someone eats twice a day what
+#  is the probability he will eat thrice?
+
+# It has two parameters:
+    # lam - rate or known number of occurrences e.g. 2
+    #       for above problem.
+    # size - The shape of the returned array.
+
+
+x = random.poisson(lam=2, size=10)
+print(x)
 
 
 '''-------------------------------------------'''
 '''            Uniform Distribution           '''
 '''-------------------------------------------'''
+
+# Used to describe probability where every event
+#  has equal chances of occuring.
+# E.g. Generation of random numbers.
+
+# It has three parameters:
+
+    # a - lower bound - default 0 .0.
+    # b - upper bound - default 1.0.
+    # size - The shape of the returned array.
+
 
 
 '''-------------------------------------------'''
