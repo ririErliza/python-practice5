@@ -1,5 +1,7 @@
 import numpy as np
 from numpy import random
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 # number = np.random.randint(100)
 number = np.random.randint(100, size =(2,3,4))
@@ -136,14 +138,19 @@ print(arr)
 '''Generating Permutation of Arrays'''
 arr1= np.array([11,12,13,14])
 print(random.permutation(arr1))
-
-
+#[14 11 13 12]
 
 
 '''-------------------------------------------'''
 '''                Seaborn Module             '''
 '''-------------------------------------------'''
+#Seaborn is a library that uses Matplotlib underneath
+# to plot graphs. It will be used to visualize
+# random distributions.
 
+#Plotting a Distplot
+sns.distplot([0, 1, 2, 3, 4, 5])
+plt.show()
 
 '''-------------------------------------------'''
 '''             Normal Distribution           '''
