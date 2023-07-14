@@ -1,4 +1,5 @@
 import numpy as np
+from numpy import random
 
 # number = np.random.randint(100)
 number = np.random.randint(100, size =(2,3,4))
@@ -41,3 +42,8 @@ print(chooseIt)
 #  [10 40 40 20]
 #  [40 30 50 40]]
 
+''' -----------From W3School------------- '''
+
+#generate random number
+x = random.radint(10)
+print(x)
