@@ -45,5 +45,75 @@ print(chooseIt)
 ''' -----------From W3School------------- '''
 
 #generate random number
-x = random.radint(10)
+x = random.randint(10)
+print(x) #9
+
+#Generate Random Float
+x = random.rand()
+print(x) #0.08409344022158316
+
+#Generate Random Array
+x = random.randint(50, size=(5))
 print(x)
+#[42 38 10 45  5]
+# Generate a 1-D array containing 5 random integers from 0 to 100
+
+x = random.randint(100, size=(2, 3))
+print(x)
+# [35 21 27 29 11]
+# [[95 96 42]
+#  [58 77 91]]
+# Generate a 2-D array with 3 rows, each row containing 5 random integers from 0 to 100
+
+''' Floats '''
+# rand() method
+x = random.rand(5)
+print(x)
+#[0.443903   0.74545327 0.87234916 0.35303884 0.86815543]
+
+x = random.rand(3, 3)
+print(x)
+# [[0.48647312 0.16432578 0.17854357]
+#  [0.72939354 0.40701167 0.41303907]
+#  [0.99806604 0.78334237 0.30555224]]
+
+''' Generate Random Number From Array '''
+#choice()
+x = random.choice([3, 5, 7, 9])
+print(x)
+# 5
+
+x = random.choice([3, 5, 7, 9], size=(3, 4))
+print(x)
+# [[7 3 3 9]
+#  [9 7 5 3]
+#  [9 7 5 3]]
+
+
+'''-------------------------------------------'''
+'''             Random Distribution           '''
+'''-------------------------------------------'''
+
+# Generate a 1-D array containing 20 values, where
+#  each value has to be 3, 5, 7 or 9.
+# The probability for the value to be 3 is set to be 0.1
+# The probability for the value to be 5 is set to be 0.3
+# The probability for the value to be 7 is set to be 0.6
+# The probability for the value to be 9 is set to be 0
+
+rd1 = random.choice([3,5,7,9], p=[0.1,0.1,0.5,0.3], size=(20))
+print(rd1)
+# [9 7 9 7 7 7 9 7 9 3 5 7 7 7 7 7 3 9 9 7]
+
+#The sum of all probability numbers (p) should be 1.
+
+rd2=random.choice([3,5,7,9], p=[0.1,0.1,0.5,0.3], size=(3,4))
+print(rd2)
+# [[9 7 9 7]
+#  [7 7 3 9]
+#  [9 7 7 7]]
+
+
+'''-------------------------------------------'''
+'''             Random Permutation           '''
+'''-------------------------------------------'''
