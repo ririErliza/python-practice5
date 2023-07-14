@@ -149,12 +149,24 @@ print(random.permutation(arr1))
 # random distributions.
 
 #Plotting a Distplot
-sns.distplot([0, 1, 2, 3, 4, 5])
-plt.show()
+# sns.distplot([0, 1, 2, 3, 4, 5]) 
+# #this distplot function was deprecated
+
+# use either displot (note, no t) or histplot
+sns.histplot([0, 1, 2, 3, 4, 5])
+#plt.show()
 
 '''-------------------------------------------'''
 '''             Normal Distribution           '''
 '''-------------------------------------------'''
+#also called the Gaussian Distribution
+
+# Use the random.normal() method to get a Normal Data Distribution.
+# It has three parameters:
+# loc - (Mean) where the peak of the bell exists.
+# scale - (Standard Deviation) how flat the graph distribution should be.
+# size - The shape of the returned array.
+
 
 
 '''-------------------------------------------'''
