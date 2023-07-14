@@ -153,7 +153,7 @@ print(random.permutation(arr1))
 # #this distplot function was deprecated
 
 # use either displot (note, no t) or histplot
-sns.histplot([0, 1, 2, 3, 4, 5])
+#sns.histplot([0, 1, 2, 3, 4, 5])
 #plt.show()
 
 '''-------------------------------------------'''
@@ -163,16 +163,48 @@ sns.histplot([0, 1, 2, 3, 4, 5])
 
 # Use the random.normal() method to get a Normal Data Distribution.
 # It has three parameters:
-# loc - (Mean) where the peak of the bell exists.
-# scale - (Standard Deviation) how flat the graph distribution should be.
-# size - The shape of the returned array.
+    # loc - (Mean) where the peak of the bell exists.
+    # scale - (Standard Deviation) how flat the graph distribution
+    #  should be.
+    # size - The shape of the returned array.
 
 
+#Generate a random normal distribution of size 2x3
+x = random.normal(size=(2, 3))
+print(x)
+# [[ 0.83680311 -0.35334149  1.37038344]
+#  [-0.37580914 -0.01300845 -0.59813139]]
+
+#Generate a random normal distribution of size 2x3
+#  with mean at 1 and standard deviation of 2
+x = random.normal(loc=3, scale=2, size=(2, 3))
+print(x)
+# [[3.71697472 2.23212999 2.50407707]
+#  [0.5066488  3.52106765 3.69046858]]
+
+# sns.distplot(random.normal(size=1000), hist=False)
+# plt.show()
 
 '''-------------------------------------------'''
 '''           Binomial Distribution           '''
 '''-------------------------------------------'''
+# Binomial Distribution is a Discrete Distribution.
 
+# It describes the outcome of binary scenarios, e.g. toss
+# of a coin, it will either be head or tails.
+
+# It has three parameters:
+
+    # n - number of trials.
+    # p - probability of occurence of each trial (e.g. for toss
+    #     of a coin 0.5 each).
+    # size - The shape of the returned array.
+
+x = random.binomial(n=10, p=0.5, size=10)
+
+print(x)
+#Given 10 trials for coin toss generate 10 data points
+# [6 4 4 5 4 4 5 5 3 4]
 
 '''-------------------------------------------'''
 '''            Poisson Distribution           '''
